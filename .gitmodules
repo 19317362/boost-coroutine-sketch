@@ -1,0 +1,6 @@
+[submodule "context"]
+	path = context
+	url = https://thejustinwalsh@github.com/thejustinwalsh/context.git
+[submodule "coroutine2"]
+	path = coroutine2
+	url = https://thejustinwalsh@github.com/thejustinwalsh/coroutine2.git
