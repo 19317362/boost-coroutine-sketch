@@ -7,25 +7,27 @@
 //
 
 #include <iostream>
-#include <boost/coroutine2/all.hpp>
+
+#include "coroutine.h"
+#include "fixedsize_stack_pool.h"
 
 int main(int argc, const char * argv[])
 {
-   using coroutine_t = boost::coroutines2::coroutine<int>;
+   //boost::context::fixedsize_stack_pool<boost::context::stack_traits> stack_pool(100);
    
-   coroutine_t::pull_type source([&](coroutine_t::push_type& sink) {
+   coroutine<int>::pull_type fibonachi([&](coroutine<int>::push_type& yield) {
       int first = 1, second = 1;
-      sink(first);
-      sink(second);
-      for (int i = 0; i < 8; ++i) {
+      yield(first);
+      yield(second);
+      for (int i = 0; i < 20; ++i) {
          int third = first + second;
          first = second;
          second = third;
-         sink(third);
+         yield(third);
        }
    });
    
-   for (auto i:source) {
+   for (auto i:fibonachi) {
       std::cout << i <<  " ";
    }
    

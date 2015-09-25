@@ -75,6 +75,8 @@
 		5CD81ABF1BB3CE6A00171A75 /* stack_traits.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stack_traits.cpp; path = ../../../../src/posix/stack_traits.cpp; sourceTree = "<group>"; };
 		5CD81AC21BB3D58400171A75 /* jump_x86_64_sysv_macho_gas.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = jump_x86_64_sysv_macho_gas.S; path = context/src/asm/jump_x86_64_sysv_macho_gas.S; sourceTree = SOURCE_ROOT; };
 		5CD81AC31BB3D58400171A75 /* make_x86_64_sysv_macho_gas.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = make_x86_64_sysv_macho_gas.S; path = context/src/asm/make_x86_64_sysv_macho_gas.S; sourceTree = SOURCE_ROOT; };
+		5CD81AC61BB459EF00171A75 /* coroutine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coroutine.h; sourceTree = "<group>"; };
+		5CD81AC71BB45E3600171A75 /* fixedsize_stack_pool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fixedsize_stack_pool.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				5CD81A801BB2606E00171A75 /* main.cpp */,
+				5CD81AC61BB459EF00171A75 /* coroutine.h */,
+				5CD81AC71BB45E3600171A75 /* fixedsize_stack_pool.h */,
 			);
 			path = "boost-coroutine-sketch";
 			sourceTree = "<group>";
